@@ -106,7 +106,6 @@ class Customerform extends StatelessWidget {
                 showname: 'Town',
                 hint: 'Town',
                 onchange: onchangetown,
-
               ),
               Customerformfild(
                 name: '$aadharno',

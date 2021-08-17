@@ -40,7 +40,80 @@ class customercard extends StatelessWidget {
             ),
             SizedBox(height: 4),
             Text(
+              cust.middleName!,
+              style: TextStyle(
+                //   color: Colors.black,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 4),
+            SizedBox(height: 4),
+            Text(
               cust.lastName!,
+              style: TextStyle(
+                //   color: Colors.black,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 4),
+            Text(
+              cust.village,
+              style: TextStyle(
+                //   color: Colors.black,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 4),
+            Text(
+              cust.town,
+              style: TextStyle(
+                //   color: Colors.black,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 4),
+            Text(
+              cust.aadharNo.toString(),
+              style: TextStyle(
+                //   color: Colors.black,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 4),
+            Text(
+              cust.contacNo.toString(),
+              style: TextStyle(
+                //   color: Colors.black,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 4),
+            Text(
+              cust.mobileNo.toString(),
+              style: TextStyle(
+                //   color: Colors.black,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 4),
+            Text(
+              cust.createdDate.toString(),
+              style: TextStyle(
+                //   color: Colors.black,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 4),
+            Text(
+              cust.modifiedDate.toString(),
               style: TextStyle(
                 //   color: Colors.black,
                 fontSize: 20,

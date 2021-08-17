@@ -1,17 +1,19 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class Customerformfild extends StatelessWidget {
-  Customerformfild(
-      {required this.name,
-      required this.status,
-      required this.showname,
-      this.maxlength,
-      this.inputetype,
-      this.filteringTextInputFormatter,
-      required this.hint,
-      this.onchange,
-      });
+  Customerformfild({
+    required this.name,
+    required this.status,
+    required this.showname,
+    this.maxlength,
+    this.inputetype,
+    this.filteringTextInputFormatter,
+    required this.hint,
+    this.onchange,
+  });
 
   final String name;
   final bool status;
@@ -21,7 +23,7 @@ class Customerformfild extends StatelessWidget {
   final List<TextInputFormatter>? filteringTextInputFormatter;
   final String hint;
   final onchange;
-  
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -32,13 +34,13 @@ class Customerformfild extends StatelessWidget {
         maxLength: maxlength,
         initialValue: name,
         enabled: status,
-        style: TextStyle(fontSize: 20.0),
+        style: TextStyle(fontSize:MediaQuery.of(context).size.width*0.2),
         keyboardType: inputetype,
         inputFormatters: filteringTextInputFormatter,
         decoration: InputDecoration(
           labelText: showname,
           hintText: hint,
-          labelStyle: TextStyle(fontSize: 40.0),
+          labelStyle: TextStyle(fontSize: MediaQuery.of(context).size.width *0.50),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10.0),
           ),
@@ -47,7 +49,6 @@ class Customerformfild extends StatelessWidget {
         //      ? 'The First Name cannot be empty'
         //      : null,
         onChanged: onchange,
-        
       ),
     );
   }

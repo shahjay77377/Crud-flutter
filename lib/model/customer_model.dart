@@ -110,24 +110,23 @@ class Customer {
           modifiedDate: modifiedDate ?? this.modifiedDate,
           isObsolate: isObsolate ?? this.isObsolate);
 
-  static Customer fromJson(Map<String, Object?> json) => Customer(
-        customerid: json[CustomerFields.customerid] as int?,
-        firstName: json[CustomerFields.firstName] as String,
-        middleName: json[CustomerFields.middleName] as String?,
-        lastName: json[CustomerFields.lastName] as String?,
-        village: json[CustomerFields.village] as String,
-        town: json[CustomerFields.town] as String,
-        aadharNo: json[CustomerFields.aadharNo] as int,
-        contacNo: json[CustomerFields.contacNo] as int,
-        mobileNo: json[CustomerFields.mobileNo] as int,
-        ref1Name: json[CustomerFields.ref1Name] as String?,
-        ref1Number: json[CustomerFields.ref1Number] as int?,
-        ref2Name: json[CustomerFields.ref2Name] as String?,
-        ref2Number: json[CustomerFields.ref2Number] as int?,
-        createdDate: DateTime.parse(json[CustomerFields.createdDate] as String),
-        modifiedDate:
-            DateTime.parse(json[CustomerFields.modifiedDate] as String),
-        isObsolate: json[CustomerFields.isObsolate] as int,
+  static Customer fromJson(Map<String, dynamic> json) => Customer(
+        customerid: json[CustomerFields.customerid],
+        firstName: json[CustomerFields.firstName],
+        middleName: json[CustomerFields.middleName],
+        lastName: json[CustomerFields.lastName],
+        village: json[CustomerFields.village],
+        town: json[CustomerFields.town],
+        aadharNo: json[CustomerFields.aadharNo],
+        contacNo: json[CustomerFields.contacNo],
+        mobileNo: json[CustomerFields.mobileNo],
+        ref1Name: json[CustomerFields.ref1Name],
+        ref1Number: json[CustomerFields.ref1Number],
+        ref2Name: json[CustomerFields.ref2Name],
+        ref2Number: json[CustomerFields.ref2Number],
+        createdDate: DateTime.parse(json[CustomerFields.createdDate]),
+        modifiedDate: DateTime.parse(json[CustomerFields.modifiedDate]),
+        isObsolate: json[CustomerFields.isObsolate],
       );
 
   Map<String, Object?> toJson() => {
@@ -137,7 +136,7 @@ class Customer {
         CustomerFields.lastName: lastName,
         CustomerFields.village: village,
         CustomerFields.town: town,
-        CustomerFields.aadharNo: aadharNo,
+        CustomerFields.aadharNo: aadharNo.toString(),
         CustomerFields.contacNo: contacNo,
         CustomerFields.mobileNo: mobileNo,
         CustomerFields.ref1Name: ref1Name,

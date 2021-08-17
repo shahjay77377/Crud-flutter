@@ -40,7 +40,7 @@ class _AddCustomerPageState extends State<AddCustomerPage> {
   @override
   void initState() {
     super.initState();
-
+    //
     if (widget.id != null) {
       custid = widget.id!;
       refreshcust();
@@ -88,52 +88,47 @@ class _AddCustomerPageState extends State<AddCustomerPage> {
       appBar: AppBar(
         actions: [deleteButton(), buildButton()],
       ),
-      body: Column(
-        children: [
-          Text(crdate.toString()),
-          Form(
-            key: _formKey,
-            child: SingleChildScrollView(
-              child: Customerform(
-                firstname: firstname,
-                middlename: middlename,
-                lastname: lastname,
-                village: village,
-                town: town,
-                aadharno: aadharno,
-                contactno: contactno,
-                mobileno: mobileno,
-                ref1name: ref1name,
-                ref1contact: ref1contact,
-                ref2name: ref2name,
-                ref2contact: ref2contact,
-                onchangefirstname: (firstname) =>
-                    setState(() => this.firstname = firstname),
-                onchangemiddlename: (middlename) =>
-                    setState(() => this.middlename = middlename),
-                onchangelastname: (lastname) =>
-                    setState(() => this.lastname = lastname),
-                onchangevillage: (village) =>
-                    setState(() => this.village = village),
-                onchangetown: (town) => setState(() => this.town = town),
-                onchangeaadharno: (aadharno) =>
-                    setState(() => this.aadharno = aadharno),
-                onchangecontactno: (contactno) =>
-                    setState(() => this.contactno = contactno),
-                onchangemobileno: (mobileno) =>
-                    setState(() => this.mobileno = mobileno),
-                onchangeref1name: (ref1name) =>
-                    setState(() => this.ref1name = ref1name),
-                onchangeref1contact: (ref1contact) =>
-                    setState(() => this.ref1contact = ref1contact),
-                onchangeref2name: (ref2name) =>
-                    setState(() => this.ref2name = ref2name),
-                onchangeref2contact: (ref2contact) =>
-                    setState(() => this.ref2contact = ref2contact),
-              ),
-            ),
+      body: Form(
+        key: _formKey,
+        child: SingleChildScrollView(
+          child: Customerform(
+            firstname: firstname,
+            middlename: middlename,
+            lastname: lastname,
+            village: village,
+            town: town,
+            aadharno: aadharno,
+            contactno: contactno,
+            mobileno: mobileno,
+            ref1name: ref1name,
+            ref1contact: ref1contact,
+            ref2name: ref2name,
+            ref2contact: ref2contact,
+            onchangefirstname: (firstname) =>
+                setState(() => this.firstname = firstname),
+            onchangemiddlename: (middlename) =>
+                setState(() => this.middlename = middlename),
+            onchangelastname: (lastname) =>
+                setState(() => this.lastname = lastname),
+            onchangevillage: (village) =>
+                setState(() => this.village = village),
+            onchangetown: (town) => setState(() => this.town = town),
+            onchangeaadharno: (aadharno) =>
+                setState(() => this.aadharno = aadharno),
+            onchangecontactno: (contactno) =>
+                setState(() => this.contactno = contactno),
+            onchangemobileno: (mobileno) =>
+                setState(() => this.mobileno = mobileno),
+            onchangeref1name: (ref1name) =>
+                setState(() => this.ref1name = ref1name),
+            onchangeref1contact: (ref1contact) =>
+                setState(() => this.ref1contact = ref1contact),
+            onchangeref2name: (ref2name) =>
+                setState(() => this.ref2name = ref2name),
+            onchangeref2contact: (ref2contact) =>
+                setState(() => this.ref2contact = ref2contact),
           ),
-        ],
+        ),
       ),
     );
   }
